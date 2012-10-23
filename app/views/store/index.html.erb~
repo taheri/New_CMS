@@ -1,0 +1,75 @@
+
+<div id="mainPan">
+  <div id="leftPan">
+  	<div id="leftTopPan">
+		<a href="index.html"><img src="images/logo.gif" title="Book Store" alt="Bookstire" width="160" height="39" border="0" /></a> </div>
+		<ul>
+			<li class="home">Home</li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">contact us</a></li>
+			<li><a href="#">create account</a></li>
+			
+			<li><a href="#">FQL</a></li>
+			<li class="contact"><a href="#">Contact</a></li>
+		</ul>
+		<form action="" method="post">
+			<h2>members login</h2>
+			<label>Log In:</label>
+		<input name="Your name" type="text" id="Yourname" />
+		<label>Password:</label>
+		<input name="password" type="password" id="password" />
+		<input name="" type="submit" class="button" value="Login" />
+		<div id="register"><a href="#">register now</a></div>
+		</form>
+		</div>
+  </div>
+ 
+  <div id="rightPan">
+  
+  	
+<h1>in the name of allah </h1> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></br>
+ <div id="headerPanelfast"> <a href="pages/new">
+ <h3>New Page </h3>
+ <p>you can create new pages</p>
+ </a></div> 
+ <div id="headerPanelsecond"> <%= link_to '              ', comments_path %>
+ <h3> comment</h3>
+ <p>you can see all of comment</p>
+ </a></div>
+ <div id="headerPanelthird">
+ <%= link_to '              ', store_path %>
+ <h3>homepage</h3>
+ <p>go to home page</p>
+ 
+ </div>
+<% if notice %>
+<p> <%= notice %></p>
+ <% end %>
+ <br/><br/><br/>
+ 
+ 
+ <h3>Posts</h3>
+<% @pages.each do |page|%>
+<div id="content">
+<div id="post">
+<h3><%=page.title %></h3>
+<p><%=page.permalink %></p>
+<%= sanitize(page.body) %></br>
+<span><%= page.created_at %></span></br>
+<span><%= page.updated_at %></span>
+</div>
+
+<h3>Comments</h3>
+<%= render(page.comments) %>
+
+ 
+<%= button_to 'Post a Comment', page, :method => 'get'  %>
+
+</div>
+  <% end %>
+<p><%= will_paginate @pages %></p>
+
+
+
+
+

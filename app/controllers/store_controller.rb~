@@ -1,0 +1,6 @@
+class StoreController < ApplicationController
+  def index
+  	  @pages = Page.all
+  	  @comment = current_comment
+  end
+end

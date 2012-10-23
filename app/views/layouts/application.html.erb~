@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>RailsCms</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body image-url:pic3.jpg >
+
+
+<body id="store">
+
+	<div id="banner">
+	<%= image_tag("comp.jpg") %><br/>
+	<%= @page_title || "Agile web development with rails" %>
+	</div>
+	<div id="sider">
+</div>
+<div id="columns">
+
+<div id="side">
+<div id="back">
+<a href="http://localhost:3000">Home</a><br /></div><br/>
+<div id="back">
+ 
+
+<a href=" pages/new">New Page</a><br /></div>
+
+</div>
+
+<div id="main">
+<%= yield %>
+</div>
+</div>
+
+<div id="footer">
+<%="Copyright 2012" %></br>
+<%="Designed by Agile" %>
+</div>
+</body>
+
+</html>

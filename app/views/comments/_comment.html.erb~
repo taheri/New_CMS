@@ -1,0 +1,13 @@
+
+
+<p>
+  <b><%= comment.name %></b> says:
+
+
+<p>
+  <%= comment.body %>
+</p>
+<p>
+  <%= comment.email %>
+</p>
+    <p><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete %></p>

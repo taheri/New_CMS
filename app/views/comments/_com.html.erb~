@@ -1,0 +1,11 @@
+
+
+<hr/>
+<h2>Comments:</h2>
+<%= render "comments/comment" %>
+<hr/>
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

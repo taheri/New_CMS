@@ -1,0 +1,20 @@
+
+
+<p>
+  <b><%= comment.name %></b> says:
+
+
+<p>
+  <%= comment.body %>
+</p>
+<p>
+  <%= comment.email %>
+  </p><%+ number_to_currency(line_item.total_price) %></td>
+<% if comment == @comment %>
+<tr id="current_item">
+<% else %>
+<tr><% end %>
+<td><%= comment.quantity %>&times; </td>
+<td><%= comment.product.title %></td>
+<td><%= class="item_price">
+    <p><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete %></p>

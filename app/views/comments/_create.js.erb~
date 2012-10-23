@@ -1,0 +1,6 @@
+$('p.comment').html("<%= escape_javascript(render('comments/comment')) %>");
+$('textarea.body').val("");
+if ($('#comment p').length == 1) { $('#comment').show('blind',1000);}
+$('#comment').html("<%=j render @comment %>");
+$('#comment').css({'background-color':'#88ff88'}).
+animate({'background-color':'#114411'},1000);

@@ -1,0 +1,34 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr  class="<%= cycle('list_line_odd', 'list_line_even')%>">
+    <th>Title</th>
+    <th>Permalink</th>
+    <th>Body</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+  <td><%= truncate(strip_tags(page.title),
+:length => 180)%>
+    </td>
+    <td><%= page.permalink %></td>
+    <td><%= page.body %></td>
+    <td><%= page.created_at %></td>
+    <td><%= page.updated_at %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page', new_page_path %>
+<p><%= will_paginate @pages %></p>

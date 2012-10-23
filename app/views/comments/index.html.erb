@@ -1,0 +1,80 @@
+
+
+
+<div id="mainPan">
+  <div id="leftPan">
+  	<div id="leftTopPan">
+		<a href="index.html"><img src="images/logo.gif" title="Consultant" alt="Consultant" width="160" height="39" border="0" /></a> </div>
+		<ul>
+			<li class="home">Home</li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">New page</a></li>
+			<li><a href="#">new comment</a></li>
+			<li><a href="#">show comments</a></li>
+			
+			<li class="contact"><a href="#">Contact</a></li>
+		</ul>
+		<form action="" method="post">
+			<h2>members login</h2>
+			<label>Log In:</label>
+		<input name="Your name" type="text" id="Yourname" />
+		<label>Password:</label>
+		<input name="password" type="password" id="password" />
+		<input name="" type="submit" class="button" value="Login" />
+		<div id="register"><a href="#">register now</a></div>
+		</form>
+		</div>
+  </div>
+ 
+  <div id="rightPan">
+  
+  	
+<h1>Listing comments</h1> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></br><br/><br/></br>
+ <div id="headerPanelfast"> <a href="pages/new">
+ <h3>New Page </h3>
+ <p>you can create new pages</p>
+ </a></div> 
+ <div id="headerPanelsecond">
+ 
+  <%= link_to '              ', comments_path %>
+  
+ <p>you can see all of comment</p>
+ </a></div>
+ <div id="headerPanelthird">
+ <%= link_to '              ', store_path %>
+ 
+ 
+ <p>go back to home page</p>
+ </a>
+ </div>
+
+<div id="content">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+    <th>Page</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @comments.each do |comment| %>
+  <tr>
+    <td><%= comment.name %></td>
+    <td><%= comment.email %></td>
+    <td><%= comment.body %></td>
+    <td><%= comment.page %></td>
+    <td><%= link_to 'Show', comment %></td>
+    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+    <td><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+  <br/>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back', store_path %>
+<p><%= will_paginate @comments %></p></div>
