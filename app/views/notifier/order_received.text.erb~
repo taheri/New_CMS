@@ -1,3 +1,7 @@
 Notifier#order_received
+Dear
+<%= @comment.name %>
+thank you for your recent order from the Paramatic Store
+you ordered the following items:
+<%=render @comment.comment %>
 
-<%= @greeting %>, find me in app/views/app/views/notifier/order_received.text.erb

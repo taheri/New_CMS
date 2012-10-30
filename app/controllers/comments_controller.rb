@@ -44,8 +44,7 @@ class CommentsController < ApplicationController
     @page = Page.find(params[:page_id])
     @comment = @page.comments.create(params[:comment])
     respond_to do |format|
-    	    Notifier.order_received(@order).deliver
-    	    format.html{redirect_to(store_url, :notice =>'Thank you for you order.')}
+    	    Notifier.order_received(@comment).deliver
     	    format.html { redirect_to :back }
     	    format.js
     end

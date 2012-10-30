@@ -1,3 +1,8 @@
 Notifier#order_shipped
-
+<h3>Paramatic Order Shipped</h3>
+<p> this is just to let you know that we've shipped your recent order:
+</p>
+<table><tr><th colspan="2">Qty </th><th>Description</th></tr>
+<%= render @order.comment%>
+</table>
 <%= @greeting %>, find me in app/views/app/views/notifier/order_shipped.text.erb
