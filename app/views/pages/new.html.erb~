@@ -1,5 +1,7 @@
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <h1>New page</h1>
-
+<div id="comment">
+<div id="new">
 <%= render 'form' %>
-
+</div></div>
 <%= link_to 'Back', pages_path %>

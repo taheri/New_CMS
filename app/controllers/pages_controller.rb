@@ -16,7 +16,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
 
     respond_to do |format|
-    	    format.html 
+    	    format.html  
     	     
       format.json { render json: @page }
     end

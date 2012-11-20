@@ -40,7 +40,7 @@ ul{list-style-type:none;}
 
 /*----Right Panel----*/
 .headerPanelfast{width:246px; height:263px; position:absolute;  background:url("orange-normal.jpg") no-repeat 0 0 #FC5F00; color:#fff;}
-#rightPan{width:451px; float:left;}
+#rightPan{width:738px;float:left;}
 #rightPan h1{width:438px; height:124px; background:url("header.jpg") 0 0 no-repeat #D33F9F; color:#fff; font:20px/13px Georgia, "Times New Roman", Times, serif; padding:37px 0 0 13px;}
 #rightPan h1 span{font:13px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 #rightPan h2{width:240px; height:36px; display:block; background:url("icon1.jpg") 0 0 no-repeat #F6F4E4; color:#8F146E; font-size:24px; line-height:36px; padding:0 0 0 65px; margin:29px 0 0 9px;}
@@ -121,4 +121,8 @@ ul{list-style-type:none;}
 #rightPan #headerPanelthird h3{display:block; width:90px; height:47px; background:none; margin:54px 0 0 93px; font:28px/28px "Trebuchet MS",Arial, Helvetica, sans-serif; font-weight:bold; text-transform:uppercase; padding:0; position:absolute; z-index:1;}
 #rightPan #headerPanelthird p{width:163px; display:block; font:12px/18px Arial, Helvetica, sans-serif; font-weight:bold;  position:absolute; top:0px; left:0px; z-index:1; padding:0; margin:105px 50px 0 38px;}
 /* /TOP PANEL*/
-
+#content{width:738px; background:#ffcccc;}
+#content #post{width:738px; background:#ff9999;}
+#comment{width:738px;padding-left:345px;padding-top:10px}
+ #comment #new{ padding-left:34px;width:738px; background:#ffcccc;padding-right:34px}
+  #comment #new #com{ background:#ff9999;}

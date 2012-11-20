@@ -5,14 +5,15 @@ class CommentsController < ApplicationController
    # @comments = Comment.all
    @comments=Comment.paginate :page => params[:comment],:order=>'created_at desc',:per_page => 4
     respond_to do |format|
-    	    format.html # index.html.erb
+    	    format.htm
       format.json { render json: @comments }
+ 
     end
   end
-
   # GET /comments/1
   # GET /comments/1.json
   def show
+  	  
     @comment = Comment.find(params[:id])
 
     respond_to do |format|

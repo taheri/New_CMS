@@ -16,7 +16,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
 
     respond_to do |format|
-    	    format.html 
+    	    format.html { redirect_to 'login'}
     	     
       format.json { render json: @page }
     end
@@ -45,7 +45,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
+      	      format.html { redirect_to store_url, notice: 'Page was successfully created.' }
         format.json { render json: @page, status: :created, location: @page }
       else
         format.html { render action: "new" }

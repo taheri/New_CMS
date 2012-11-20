@@ -14,7 +14,7 @@ class PagesControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
-  end
+  end 
 
   test "should create page" do
     assert_difference('Page.count') do
